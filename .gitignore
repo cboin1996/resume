@@ -1,0 +1,10 @@
+# .tex generation files
+resume.*
+!resume.tex
+
+build
+
+.task/
+
+# OS files
+.DS_Store

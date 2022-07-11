@@ -1,0 +1,45 @@
+version: '3'
+silent: true
+output: prefixed
+vars:
+  BUILD_DIR: "./build" # where the pdflatex compiler sends aux files
+  PDFLATEX_ARGS: "-output-directory={{.BUILD_DIR}} -shell-escape"
+  MAIN: "resume.tex"
+  PDF_FILE: "resume.pdf"
+  PDFLATEX: "pdflatex {{.PDFLATEX_ARGS}} {{.MAIN}}"
+tasks:
+  dev:
+    prefix: dev
+    desc: |
+      run this task with -w flag -- task dev -w -- and the task
+      will watch for file changes and rebuild the pdf.
+    cmds:
+      - task: build
+    sources:
+      - ./resume.tex
+      - ./mystyle.sty
+
+  build:
+    prefix: build
+    desc: build the pdf
+    cmds:
+      - "{{.PDFLATEX}}"
+      - "{{.PDFLATEX}}"
+      - "{{.PDFLATEX}}"
+      - task: clean
+    deps:
+      - task: create:buildir
+
+  clean:
+    prefix: clean
+    desc: remove the aux directory, which includes build files
+    cmds:
+      - find {{.BUILD_DIR}} ! -name '{{.PDF_FILE}}' -type f -exec rm -f {} +
+
+  create:buildir:
+    prefix: create > builddir
+    desc: creates the build directory
+    cmds:
+      - mkdir build
+    status: # only run if build_dir does not exist
+      - "test -d {{.BUILD_DIR}}"
