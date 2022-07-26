@@ -18,9 +18,11 @@ jobs:
           tag=$(echo $GITHUB_REF | sed 's/refs\/tags\///g')
         fi
         echo "::set-output name=tag::$tag"
+    - name: Install Task
+      uses: arduino/setup-task@v1
     - name: Build pdf
       run: |
-        apk add --upgrade go-task git
+        apk add git
         PDF_ENGINE=pdflatex VERSION=$RELEASE_VERSION task build
       env:
         RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
