@@ -1,6 +1,6 @@
 # Description
 
-My resume
+My resume: https://github.com/cboin1996/resume/releases/latest/download/resume.pdf
 
 # Development/Editing Instructions
 Run the below command and the task will re-build the pdf for the project if any of the files change.
