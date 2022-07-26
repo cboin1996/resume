@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: pandoc/latex:2.16.1
+      image: blang/latex:ubuntu@sha256:efd846045144c647057cceb9887a311d171abe9ed1699e92bd1ea240bbc18003
     steps:
     - uses: actions/checkout@master
     - name: Get Commit or Tag
@@ -22,8 +22,9 @@ jobs:
       uses: arduino/setup-task@v1
     - name: Build pdf
       run: |
-        apk add git
-        PDF_ENGINE=pdflatex VERSION=$RELEASE_VERSION task build
+        apt update
+        apt install git
+        task build
       env:
         RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
     - name: Provide pdf
