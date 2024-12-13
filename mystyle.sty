@@ -20,7 +20,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{fontawesome}
 \usepackage[most]{tcolorbox}
-
+\usepackage{longtable}
 
 % Margins
 \geometry{left=1in, top=0.9in, right=1in, bottom=0.9in}
@@ -28,76 +28,90 @@
 
 % Section formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+	\vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
 
+\newcommand{\sectionsep}{\vspace{-2.5mm}}
 
 %--- Custom ---%
 
 \newcommand{\resumePOR}[3]{
-\vspace{0.5mm}\item[]
-    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \hspace{-3mm}{#1}:\hspace{1mm} & \hspace*{0pt}\hfill{\footnotesize{ #3}} \vspace{-0.5mm}\\ \hspace{-2.9mm}#2
-    \end{tabular*}
-    \vspace{0mm}
+	\vspace{0.5mm}\item[]
+	\begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\hspace{-3mm}{#1}:\hspace{1mm} & \hspace*{0pt}\hfill{\footnotesize{ #3}} \vspace{-0.5mm}\\ \hspace{-2.9mm}#2
+	\end{tabular*}
+	\vspace{0mm}
 }
 
 \newcommand{\resumeExp}[4]{
-\vspace{0mm}\item[]
-    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \hspace{-4.4mm} \small\textbf{#1} & {\footnotesize{#3}}\vspace{-1.2mm}\\
-        \hspace{-4.3mm} \footnotesize{\text{#2}} & \footnotesize{#4}
-    \end{tabular*}
-    \vspace{-5.1mm}
+	\vspace{0mm}\item[]
+	\begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\hspace{-4.4mm} \small\textbf{#1} & {\footnotesize{#3}}\vspace{-1.2mm}\\
+		\hspace{-4.3mm} \footnotesize{\text{#2}} & \footnotesize{#4}
+	\end{tabular*}
+	\vspace{-5.1mm}
 }
 
 \newcommand{\resumeProject}[2]{
-\vspace{0mm}\item[]
-    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \hspace{-4.4mm} \small\textbf{#1} & {\footnotesize{#2}}\vspace{-1mm}
-    \end{tabular*}
-    \vspace{-8.1mm}
+	\vspace{0mm}\item[]
+	\begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\hspace{-4.4mm} \small\textbf{#1} & {\footnotesize{#2}}\vspace{-1mm}
+	\end{tabular*}
+	\vspace{-8.1mm}
 }
 
 \newcommand{\resumeCert}[3]{
-\vspace{0mm}\item[]
-    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \hspace{-4.4mm} \small\textbf{#1} & {\footnotesize{#3}}\vspace{-1.2mm}\\
-        \hspace{-4.3mm} \footnotesize{\text{#2}}
-    \end{tabular*}
-    \vspace{-0.1mm}
+	\vspace{0mm}\item[]
+	\begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\hspace{-4.4mm} \small\textbf{#1} & {\footnotesize{#3}}\vspace{-1.2mm}\\
+		\hspace{-4.3mm} \footnotesize{\text{#2}}
+	\end{tabular*}
+	\vspace{-0.1mm}
 }
 
 \newcommand{\resumeEdu}[4]{
-\vspace{0mm}\item[]
-    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \hspace{-4.3mm} \small\textbf{#1} & \footnotesize{#3}\vspace{-1mm} \\
-        \hspace{-4.3mm} \footnotesize{#2} & \footnotesize{#4}
-    \end{tabular*}
-    \vspace{-4.2mm}
+	\vspace{0mm}\item[]
+	\begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\hspace{-4.3mm} \small\textbf{#1} & \footnotesize{#3}\vspace{-1mm} \\
+		\hspace{-4.3mm} \footnotesize{#2} & \footnotesize{#4}
+	\end{tabular*}
+	\vspace{-4.2mm}
 }
 
 \newcommand{\resumeAchieve}[3]
 {
-\hspace{-3.1mm}\textbf{ #1} & {#2} & \hspace{3mm}\footnotesize{#3}
-\vspace{0mm}\\
+	\hspace{-3.1mm}\textbf{ #1} & {#2} & \hspace{3mm}\footnotesize{#3}
+	\vspace{0mm}\\
 }
 
 
 \renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
+\newenvironment{subheading}
+{\begin{itemize}[leftmargin=*,labelsep=0mm,itemsep=-2.5mm]}
+		{\end{itemize}\vspace{-2mm}}
+
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm,itemsep=-2.5mm]}
+		\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2mm}}
+
+\newenvironment{entries}
+{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small\vspace{1.0mm}}
+			{\end{itemize}\end{justify}\vspace{1.0mm}}
 
 \newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small\vspace{1.0mm}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{1.0mm}}
+			\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{1.0mm}}
 
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2mm}}
+\newenvironment{tablelist}
+{\begin{itemize}[noitemsep,labelsep=1.2mm,itemsep=0mm]}
+		{\end{itemize}}
+
+\newcommand{\tableItemListStart}{\begin{itemize}[noitemsep,labelsep=1.2mm,itemsep=0mm]}
+		\newcommand{\tableItemListEnd}{\end{itemize}}
+
+\newcommand{\ib}{\item[$\bullet$]}
 
 \renewcommand{\arraystretch}{1}
 
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}%
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
 \newcolumntype{C}{>{\centering\arraybackslash}X}%
-
-
-
