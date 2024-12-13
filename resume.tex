@@ -1,10 +1,11 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage{mystyle}
+\usepackage{subfiles} 
 
+\graphicspath{{./images/}{images/}} %this command specifies first the path relative to main file to images folder, then the path relative to sub file i think.. very important
 \newcommand{\name}{CHRISTIAN D. BOIN} % Your Name
 \newcommand{\github}{cboin1996} %Github
 \newcommand{\linkedin}{christian-boin-masc-ai-6b705a135} %linkedin
-\newcommand{\sectionsep}{\vspace{-2.5mm}}
 
 \begin{document}
 \fontfamily{cmr}\selectfont
@@ -14,204 +15,207 @@
 \newcommand{\iconspace}{0.4mm}
 \newcommand{\headingsep}{1cm}
 \begin{center}
-    \small{\href{https://github.com/\github}{\faGithub \hspace{\iconspace} \github} \hspace{\headingsep}
-           \href{https://www.linkedin.com/in/\linkedin/}{\faLinkedinSquare \hspace{\iconspace} christian-boin} \hspace{\headingsep}
-           \href{https://cboin1996.github.io/life/}{\faFileCodeO \hspace{\iconspace} cboin1996.github.io/life}
-    }
+	\small{\href{https://github.com/\github}{\faGithub \hspace{\iconspace} \github} \hspace{\headingsep}
+		\href{https://www.linkedin.com/in/\linkedin/}{\faLinkedinSquare \hspace{\iconspace} christian-boin} \hspace{\headingsep}
+		\href{https://cboin1996.github.io/life/}{\faFileCodeO \hspace{\iconspace} cboin1996.github.io/life}
+	}
 \end{center}
 \begin{center}
-    \vspace{-0.4cm}
-    \huge{{\name}}
+	\vspace{-0.4cm}
+	\huge{{\name}}
 \end{center}
 \begin{center}
-    \vspace{-0.2cm}
-    \tiny{
-        Phone and email available upon request
-    }
+	\vspace{-0.2cm}
+	\tiny{
+		Phone and email available upon request
+	}
 \end{center}
 %----------SKILLS---------------%
 \section{Technical Skills}
-\resumeItemListStart
-\item[$\bullet$] Developed a diverse skillset with technologies: \textbf{Git}, \textbf{Docker}, \textbf{Go},
-\textbf{Python}, \textbf{C}, \textbf{C++}, \textbf{Swift}, \textbf{Java}, \textbf{SQL}, \textbf{Tensorflow}, \textbf{React},
-\textbf{Flask} and \textbf{Spring Boot} from professional experience
-\item[$\bullet$] Built a strong understanding of cloud native technologies such as: \textbf{ArgoCD}, \textbf{Argo Workflows},
-\textbf{Kubeflow}, \textbf{Helm},
-\textbf{Terraform}, CI tools (\textbf{Github CI, Gitlab CI}) and \textbf{Azure} through the development and deployment
-of cloud native applications
-\item[$\bullet$] Honed testing and debugging skills through the full design cycle of software applications related
-to a variety of systems using unit tests
-\item[$\bullet$] Built a strong foundation in data science and machine learning software solutions through
-research, professional and personal projects
-\item[$\bullet$] Developed excellent teamwork and communication skills through engineering leadership experience,
-supervisory roles and leading the University of Guelph robotics team
-\item[$\bullet$] Acquired years of experience with Linux, MacOS and Windows as development environments
-\resumeItemListEnd
+\begin{entries}
+	\ib Developed a diverse skillset with technologies: \textbf{Git}, \textbf{Docker}, \textbf{Go},
+	\textbf{Python}, \textbf{C}, \textbf{C++}, \textbf{Swift}, \textbf{Java}, \textbf{SQL}, \textbf{Tensorflow}, \textbf{React},
+	\textbf{Flask} and \textbf{Spring Boot} from professional experience
+	\ib Built a strong understanding of cloud native technologies such as: \textbf{ArgoCD}, \textbf{Argo Workflows},
+	\textbf{Kubeflow}, \textbf{Helm},
+	\textbf{Terraform}, CI tools (\textbf{Github CI, Gitlab CI}) and \textbf{Azure} through the development and deployment
+	of cloud native applications
+	\ib Honed testing and debugging skills through the full design cycle of software applications related
+	to a variety of systems using unit tests
+	\ib Built a strong foundation in data science and machine learning software solutions through
+	research, professional and personal projects
+	\ib Developed excellent teamwork and communication skills through engineering leadership experience,
+	supervisory roles and leading the University of Guelph robotics team
+	\ib Acquired years of experience with Linux, MacOS and Windows as development environments
+\end{entries}
 
 \sectionsep
 %-----------EXPERIENCE-----------------
 \section{Experience}
-\resumeSubHeadingListStart
+\begin{subheading}
 
-\resumeExp
-{Cloud Application Architect -- Amazon Web Services}
-{Remote, Guelph ON}
-{November 2022 -- Present}
-{}
-\resumeItemListStart
-\item[$\bullet$] Content coming soon!
-\resumeItemListEnd
+	\resumeExp
+	{Cloud Application Architect -- Amazon Web Services}
+	{Remote, Guelph ON}
+	{November 2022 -- Present}
+	{}
+	\begin{entries}
+		\ib Content coming soon!
+	\end{entries}
 
-\resumeExp
-{Cloud Application Architect -- Statistics Canada}
-{Remote, Guelph ON}
-{January 2022 -- October 2022}
-{}
-\resumeItemListStart
-\item[$\bullet$] Worked with a team of developers on a \textbf{Kubernetes} cloud based machine learning and data science
-platform known as the Advanced Analytics Workspace
-\href{https://analytics-platform.statcan.gc.ca/covid19}{\footnotesize{\faExternalLink}}
-\item[$\bullet$] Responsible for the architecture design and implementation of features to  empower data and ML scientists to
-use cloud compute power with  minimal effort
-\item[$\bullet$] Worked with \textbf{ArgoCD}, \textbf{Go}, \textbf{Github CI}, \textbf{Gitlab CI}, \textbf{Docker}, \textbf{Helm} and
-\textbf{Terraform} to design features for hundreds of users
-\item[$\bullet$] Wrote and deployed \textbf{Kubernetes} controllers to dynamically provision application
-features across hundreds of user namespaces, while
-also managing the complex integration of features with \textbf{Kubeflow} for centralized access
-\resumeItemListEnd
+	\resumeExp
+	{Cloud Application Architect -- Statistics Canada}
+	{Remote, Guelph ON}
+	{January 2022 -- October 2022}
+	{}
+	\begin{entries}
+		\ib Worked with a team of developers on a \textbf{Kubernetes} cloud based machine learning and data science
+		platform known as the Advanced Analytics Workspace
+		\href{https://analytics-platform.statcan.gc.ca/covid19}{\footnotesize{\faExternalLink}}
+		\ib Responsible for the architecture design and implementation of features to  empower data and ML scientists to
+		use cloud compute power with  minimal effort
+		\ib Worked with \textbf{ArgoCD}, \textbf{Go}, \textbf{Github CI}, \textbf{Gitlab CI}, \textbf{Docker}, \textbf{Helm} and
+		\textbf{Terraform} to design features for hundreds of users
+		\ib Wrote and deployed \textbf{Kubernetes} controllers to dynamically provision application
+		features across hundreds of user namespaces, while
+		also managing the complex integration of features with \textbf{Kubeflow} for centralized access
+	\end{entries}
 
-\resumeExp
-{Lead Software Developer -- Automated Guided Vehicles Division}
-{JMP, Cambridge ON}
-{August 2020 -- December 2021}
-{}
-\resumeItemListStart
-\item[$\bullet$] Led the design and development of fleet management software solutions solving issues related to
-AMR facility integration decreasing project delivery time and streamlining integration processes
-\item[$\bullet$]  Managed full development cycle of software solutions across multiple projects, furthering
-knowledge in testing, license management, version control and software architecture
-\item[$\bullet$] Created full stack applications using \textbf{Java Spring Boot} and \textbf{Python Flask} backends with
-\textbf{PostgreSQL} schema and \textbf{React} front-end for use in projects reducing JMP's engineering hours
-per project while increasing product ease of use for clients
-\item[$\bullet$] Designs often exceeded customer expectations where 24/7 uptime is required
-\item[$\bullet$] Recipient of the Rookie of the Year award because of innovative contributions to JMP
-\resumeItemListEnd
+	\resumeExp
+	{Lead Software Developer -- Automated Guided Vehicles Division}
+	{JMP, Cambridge ON}
+	{August 2020 -- December 2021}
+	{}
+	\begin{entries}
+		\ib Led the design and development of fleet management software solutions solving issues related to
+		AMR facility integration decreasing project delivery time and streamlining integration processes
+		\ib  Managed full development cycle of software solutions across multiple projects, furthering
+		knowledge in testing, license management, version control and software architecture
+		\ib Created full stack applications using \textbf{Java Spring Boot} and \textbf{Python Flask} backends with
+		\textbf{PostgreSQL} schema and \textbf{React} front-end for use in projects reducing JMP's engineering hours
+		per project while increasing product ease of use for clients
+		\ib Designs often exceeded customer expectations where 24/7 uptime is required
+		\ib Recipient of the Rookie of the Year award because of innovative contributions to JMP
+	\end{entries}
 
-\newpage
-\resumeExp
-{Software Developer -- Controls Division}
-{JMP, Cambridge ON}
-{May 2019 -- December 2019}
-{}
-\resumeItemListStart
-\item[$\bullet$] Devised and implemented an asset tracking database using Sharepoint with a front-end
-Powerapps application improving asset control in JMP's warehouse
-\item[$\bullet$] Improved research and design skills by building a backend \textbf{Python} application connecting REST
-to PLC's utilizing \textbf{OPCUA}
-\item[$\bullet$] Designed and commissioned an autonomous mobile robot (AMR) fleet system for an automotive client that delivered and
-returned parts from their automobile assembly line, increasing production efficiency
-\item[$\bullet$] Received a company-wide innovation award for significant research and design contributions to
-my projects; I was the first co-op student at JMP to be recognized in such a manner
-\resumeItemListEnd
+	\newpage
+	\resumeExp
+	{Software Developer -- Controls Division}
+	{JMP, Cambridge ON}
+	{May 2019 -- December 2019}
+	{}
+	\begin{entries}
+		\ib Devised and implemented an asset tracking database using Sharepoint with a front-end
+		Powerapps application improving asset control in JMP's warehouse
+		\ib Improved research and design skills by building a backend \textbf{Python} application connecting REST
+		to PLC's utilizing \textbf{OPCUA}
+		\ib Designed and commissioned an autonomous mobile robot (AMR) fleet system for an automotive client that delivered and
+		returned parts from their automobile assembly line, increasing production efficiency
+		\ib Received a company-wide innovation award for significant research and design contributions to
+		my projects; I was the first co-op student at JMP to be recognized in such a manner
+	\end{entries}
 
-\resumeSubHeadingListEnd
+\end{subheading}
 \sectionsep
 %-----------EDUCATION------------%
 \section{Education}
 
-\resumeSubHeadingListStart
-\resumeEdu
-{Master of Applied Science with Collaborative Specialization in AI}
-{University of Guelph, Guelph, ON}
-{August 2020 -- Present} %Event Dates
-{Expected Graduation: October 2022}
-\resumeItemListStart
-\item[$\bullet$] Studied federated deep reinforcement learning applied to autonomous vehicle platoon control:
-\href{https://atrium.lib.uoguelph.ca/xmlui/handle/10214/27063}{\footnotesize{\faExternalLink}}
-\item[$\bullet$] Published work in Intelligence \& Robotics Journal as a result of research success:
-\href{https://intellrobot.com/article/view/4885}{\footnotesize{\faExternalLink}}
-\resumeItemListEnd
+\begin{subheading}
+	\resumeEdu
+	{Master of Applied Science with Collaborative Specialization in AI}
+	{University of Guelph, Guelph, ON}
+	{August 2020 -- October 2022} %Event Dates
+	{}
+	\begin{entries}
+		\ib Studied federated deep reinforcement learning applied to autonomous vehicle platoon control:
+		\href{https://atrium.lib.uoguelph.ca/xmlui/handle/10214/27063}{\footnotesize{\faExternalLink}}
+		\ib Published work in Intelligence \& Robotics Journal as a result of research success:
+		\href{https://intellrobot.com/article/view/4885}{\footnotesize{\faExternalLink}}
+	\end{entries}
 
-\resumeEdu
-{Bachelor of Engineering Co-op Mechanical Engineering, Honours }
-{University of Guelph, Guelph, ON}
-{September 2015 -- May 2020}
-{}
+	\resumeEdu
+	{Bachelor of Engineering Co-op Mechanical Engineering, Honours }
+	{University of Guelph, Guelph, ON}
+	{September 2015 -- May 2020}
+	{}
 
-\resumeItemListStart
-\item[$\bullet$] Recognized on the Dean's list every semester
-\item[$\bullet$] Guelph Entrance Scholarship granted for admission with over 90\% average
-\resumeItemListEnd
-\resumeSubHeadingListEnd
+	\begin{entries}
+		\ib Recognized on the Dean's list every semester
+		\ib Guelph Entrance Scholarship granted for admission with over 90\% average
+	\end{entries}
+\end{subheading}
 \sectionsep
 
 %-----------PROJECTS------------%
 \section{Software Projects}
-\resumeSubHeadingListStart
-\resumeProject
-{\href{https://github.com/cboin1996/dalle-ays}{Dalle-ays \footnotesize{\faExternalLink}}} %Project Name
-{August 2022 -- Present} %Event Dates
-\resumeItemListStart
-\item[$\bullet$] Implemented a \textbf{FastAPI} server for hosting dalle-mini models.
-\item[$\bullet$] Integrated dalle-ays with \href{https://github.com/cboin1996/pigbot}{Pigbot \footnotesize{\faExternalLink}}
-to allow people in discord to interact with dalle-ays's various features via messages.
-\item[$\bullet$] Features include: Downloading of new models, model caching and image search.
+\begin{subheading}
+	\resumeProject
+	{\href{https://github.com/cboin1996/dalle-ays}{Dalle-ays \footnotesize{\faExternalLink}}} %Project Name
+	{August 2022 -- Present} %Event Dates
+	\begin{entries}
+		\ib Implemented a \textbf{FastAPI} server for hosting dalle-mini models.
+		\ib Integrated dalle-ays with \href{https://github.com/cboin1996/pigbot}{Pigbot \footnotesize{\faExternalLink}}
+		to allow people in discord to interact with dalle-ays's various features via messages.
+		\ib Features include: Downloading of new models, model caching and image search.
 
-\resumeItemListEnd
-\resumeProject
-{\href{https://github.com/\github/avddpg}{AVDDPG \footnotesize{\faExternalLink}}}
-{September 2020 -- Present} %Event Dates
-\resumeItemListStart
-\item[$\bullet$] Designed a co-operative adaptive cruise control environment in \textbf{Python} using \textbf{Tensorflow} and
-\textbf{Keras}
-\item[$\bullet$] Trained decentralized \textbf{Deep Reinforcement Learning} agents in order to analyse the performance benefits \textbf{Federated Reinforcement Learning (FRL)}
-can provide to autonomous vehicle platooning
-\item[$\bullet$] Features include: Segregated experiment framework, \LaTeX \hspace{0.5pt} report generation for experiments,
-variety of discretization methods in environment design, multi platoon support, FRL
-\resumeItemListEnd
+	\end{entries}
+	\resumeProject
+	{\href{https://github.com/\github/avddpg}{AVDDPG \footnotesize{\faExternalLink}}}
+	{September 2020 -- Present} %Event Dates
+	\begin{entries}
+		\ib Designed a co-operative adaptive cruise control environment in \textbf{Python} using \textbf{Tensorflow} and
+		\textbf{Keras}
+		\ib Trained decentralized \textbf{Deep Reinforcement Learning} agents in order to analyse the performance benefits \textbf{Federated Reinforcement Learning (FRL)}
+		can provide to autonomous vehicle platooning
+		\ib Features include: Segregated experiment framework, \LaTeX \hspace{0.5pt} report generation for experiments,
+		variety of discretization methods in environment design, multi platoon support, FRL
+	\end{entries}
 
-\resumeProject
-{\href{https://github.com/cboin1996/JukeBox}{Music Downloading Platform \footnotesize{\faExternalLink}}} %Project Name
-{February 2019 -- Present} %Event Dates
-\resumeItemListStart
-\item[$\bullet$] Created a \textbf{Python} YouTube to MP3 music downloading program leveraging iTunes Search \textbf{API} to format
-MP3 files with official MP3 metadata
-\item[$\bullet$] Features include: Music playback, voice activated controls, song downloading, auto updates,
-integration with iTunes
-\resumeItemListEnd
+	\resumeProject
+	{\href{https://github.com/cboin1996/JukeBox}{Music Downloading Platform \footnotesize{\faExternalLink}}} %Project Name
+	{February 2019 -- Present} %Event Dates
+	\begin{entries}
+		\ib Created a \textbf{Python} YouTube to MP3 music downloading program leveraging iTunes Search \textbf{API} to format
+		MP3 files with official MP3 metadata
+		\ib Features include: Music playback, voice activated controls, song downloading, auto updates,
+		integration with iTunes
+	\end{entries}
 
 
-\resumeSubHeadingListEnd
+\end{subheading}
 \sectionsep
 %-----------VOLUNTEERING----------%
 \section{Volunteer Experience}
-\resumeSubHeadingListStart
+\begin{subheading}
 
-\resumeExp
-{Robotics Team Co-President}
-{University of Guelph, Guelph, ON}
-{September 2017 -- April 2018} %Event Dates
-{}
-\resumeItemListStart
-\item[$\bullet$] Applied course concepts while teaching and leading robotics team members
-\item[$\bullet$] Improved knowledge of mechanisms and robotic systems by working on several mechatronics
-projects in a team-based environment
-\item[$\bullet$] Improved project management skills by running weekly meetings, filing documents and
-recruiting new members through participation in Guelph events
-\resumeItemListEnd
-\resumeSubHeadingListEnd
+	\resumeExp
+	{Robotics Team Co-President}
+	{University of Guelph, Guelph, ON}
+	{September 2017 -- April 2018} %Event Dates
+	{}
+	\begin{entries}
+		\ib Applied course concepts while teaching and leading robotics team members
+		\ib Improved knowledge of mechanisms and robotic systems by working on several mechatronics
+		projects in a team-based environment
+		\ib Improved project management skills by running weekly meetings, filing documents and
+		recruiting new members through participation in Guelph events
+	\end{entries}
+\end{subheading}
 
 %---------CERTIFICATION---------%
 \section{Certifications}
-\resumeSubHeadingListStart
+\begin{subheading}
 
-\resumeCert
-{Reliability Security Clearance}
-{Government of Canada}
-{October 2021 -- October, 2031}
-\resumeCert
-{Engineer in Training, License number: 100556457}
-{Professional Engineers Ontario}
-{October 2020 -- Present}
-\resumeSubHeadingListEnd
+	\resumeCert
+	{Secret Security Clearance}
+	{Government of Canada}
+	{February 2023 -- February, 2033}
+	\resumeCert
+	{Engineer in Training, License number: 100556457}
+	{Professional Engineers Ontario}
+	{October 2020 -- Present}
+\end{subheading}
+
+% \subfile{projects.tex}
+
 \end{document}
